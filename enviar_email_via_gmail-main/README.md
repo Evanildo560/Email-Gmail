@@ -1,6 +1,5 @@
 # enviar_email_via_gmail
 Enviar Email Via Gmail
-# Autor: Adriano Machado
 # Função e exemplo de envio de email via gmail em python. 
 # Atualizado em 08 de set de 2021
 

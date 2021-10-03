@@ -28,5 +28,5 @@ def enviar_email_via_gmail(assunto, corpo_email, destinatario):
     print('Email enviado')
 
 
-enviar_email_via_gmail("Corinthianssssssssss tem mundial", "<p>Corinthiansssssssssss te mundial<p><br><br>", "equipeinfocode@gmail.com") 
+enviar_email_via_gmail("Teste", "<p>Corpo do email<p><br><br>", "email@gmail.com") 
 
