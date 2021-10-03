@@ -1,0 +1,32 @@
+import smtplib
+import email.message
+import email_settings
+
+
+def enviar_email_via_gmail(assunto, corpo_email, destinatario): 
+    """ Esta função envia emails utilizando a conta do Gmail """ 
+    
+    msg = email.message.Message()
+    
+    msg['Subject'] = assunto 
+
+    msg['From'] = email_settings.GMAIL_FROM
+    msg['To'] = destinatario
+
+    password = email_settings.GMAIL_SENHA
+
+    msg.add_header('Content-Type', 'text/html')
+
+    msg.set_payload(corpo_email )
+
+    s = smtplib.SMTP(email_settings.GMAIL_SMTP)
+
+    s.starttls()
+
+    s.login(msg['From'], password)
+    s.sendmail(msg['From'], [msg['To']], msg.as_string().encode('utf-8'))
+    print('Email enviado')
+
+
+enviar_email_via_gmail("Corinthianssssssssss tem mundial", "<p>Corinthiansssssssssss te mundial<p><br><br>", "equipeinfocode@gmail.com") 
+
